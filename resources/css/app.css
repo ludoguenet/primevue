@@ -1,3 +1,73 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --primary-50: 252 250 242;    /* Blanc cassé très clair */
+    --primary-100: 248 245 232;   /* Blanc cassé plus prononcé */
+    --primary-200: 240 235 217;   /* Teinte plus douce */
+    --primary-300: 229 221 195;   /* Blanc cassé avec une touche de beige */
+    --primary-400: 218 207 175;   /* Plus de profondeur dans la couleur */
+    --primary-500: 207 193 155;   /* Teinte plus sombre */
+    --primary-600: 186 174 140;   /* Transition vers un blanc cassé foncé */
+    --primary-700: 160 149 118;   /* Plus de contraste et de profondeur */
+    --primary-800: 134 124 98;    /* Ton plus terreux */
+    --primary-900: 108 100 79;    /* Blanc cassé très foncé */
+    --primary-950: 85 78 62;      /* Presque brun clair */
+
+    --surface-0: 255 255 255;     /* Blanc pur */
+    --surface-50: 250 250 250;    /* Très clair */
+    --surface-100: 244 244 245;   /* Très léger ton gris */
+    --surface-200: 238 238 237;   /* Blanc cassé très léger */
+    --surface-300: 232 232 231;   /* Léger ton plus sombre */
+    --surface-400: 221 221 219;   /* Blanc cassé */
+    --surface-500: 210 210 207;   /* Ton intermédiaire */
+    --surface-600: 188 188 183;   /* Ton plus foncé */
+    --surface-700: 166 166 161;   /* Plus de profondeur */
+    --surface-800: 144 144 138;   /* Blanc cassé foncé */
+    --surface-900: 122 122 116;   /* Presque gris foncé */
+    --surface-950: 100 100 93;    /* Plus proche du gris */
+
+    --primary: var(--primary-500);
+    --primary-inverse: var(--surface-0);
+    --primary-hover: var(--primary-600);
+    --primary-active-color: var(--primary-600);
+
+    --primary-highlight-opacity: 0.1;
+    --primary-highlight-inverse: var(--primary-700);
+    --primary-highlight-hover-opacity: 0.2;
+}
+.dark{
+    --primary: var(--primary-400);
+    --primary-inverse: var(--surface-900);
+    --primary-hover: var(--primary-300);
+    --primary-active-color: var(--primary-300);
+
+    --primary-highlight-opacity: 0.2;
+    --primary-highlight-inverse: var(--surface-0);
+    --primary-highlight-hover-opacity: 0.3;
+}
+
+.customized-primary {
+    &:not(.dark){
+        --primary: var(--primary-950);
+        --primary-inverse: var(--surface-0);
+        --primary-hover: var(--primary-800);
+        --primary-active-color: var(--primary-900);
+
+        --primary-highlight-opacity: 1;
+        --primary-highlight-inverse: var(--surface-0);
+        --primary-highlight-hover-opacity: 0.8;
+    }
+    &.dark{
+        --primary: var(--primary-50);
+        --primary-inverse: var(--surface-950);
+        --primary-hover: var(--primary-100);
+        --primary-active-color: var(--primary-100);
+
+        --primary-highlight-opacity: 0.1;
+        --primary-highlight-inverse: var(--surface-0);
+        --primary-highlight-hover-opacity: 0.2;
+
+    }
+}
